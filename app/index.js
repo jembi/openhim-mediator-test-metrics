@@ -100,7 +100,7 @@ app.get('/hello', function (req, res) {
 
   // construct property data to be returned
   var properties = {};
-  properties['property'] = 'Primary Route';
+  properties['name'] = 'Primary Route';
 
   // construct returnObject to be returned
   var returnObject = {
