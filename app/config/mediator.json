@@ -1,0 +1,40 @@
+{
+  "urn": "urn:uuid:ff932010-b028-11e4-9ace-d549eeec0f4shgd",
+  "version": "0.1.0",
+  "name": "example-mediator",
+  "description": "This is an echo mediator with orchestrations",
+  "defaultChannelConfig": [
+    {
+      "name": "example-mediator",
+      "urlPattern": "/sample-pattern",
+      "alerts": [],
+      "txRerunAcl": [],
+      "txViewFullAcl": [],
+      "txViewAcl": [],
+      "properties": [],
+      "matchContentTypes": [],
+      "routes": [
+        {
+          "name": "example-mediator Route",
+          "host": "localhost",
+          "path": "get",
+          "port": "4001",
+          "primary": true,
+          "type": "http"
+        }
+      ],
+      "allow": ["admin"],
+      "type": "http"
+    }
+  ],
+  "endpoints": [
+    {
+      "name": "example-mediator Route",
+      "host": "localhost",
+      "path": "get",
+      "port": "4001",
+      "primary": true,
+      "type": "http"
+    }
+  ]
+}
