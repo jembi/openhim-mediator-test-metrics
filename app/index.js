@@ -56,6 +56,11 @@ app.get('/hello', function (req, res) {
         type: 'timer',
         name: 'orchestration-timer-name',
         value: 10 // In Seconds
+      },
+      {
+        type: 'gauge',
+        name: 'orchestration-gauge-name',
+        value: 10 // In Seconds
       }
     ]
   });
@@ -85,6 +90,11 @@ app.get('/hello', function (req, res) {
       type: 'timer',
       name: 'mediator-timer-name',
       value: 100 // In Seconds
+    },
+    {
+      type: 'gauge',
+      name: 'mediatior-gauge-name',
+      value: 10 // In Seconds
     }
   ]
 
