@@ -1,6 +1,7 @@
 // load modules
 var express = require('express')
 var app = express()
+var delay = require('express-delay');
 
 // get config objects
 var config = require("./config/config");
@@ -15,6 +16,9 @@ register.registerMediator( apiConfig, mediatorConfig)
 /* ######################### */
 /* ##### Server Setup  ##### */
 /* ######################### */
+
+/* ##### Delay Response #### */
+app.use(delay(Math.random() * (4000) + 1000))
 
 /* ##### Default Endpoint  ##### */
 app.get('/hello', function (req, res) {
@@ -32,7 +36,7 @@ app.get('/hello', function (req, res) {
   //Capture 'primary' orchestration data
   orchestrationsResults = [];
   orchestrationsResults.push({
-    name: 'Primary Route',
+    name: 'Primary Orchestration',
     request: {
       path : req.path,
       headers: req.headers,
@@ -50,7 +54,7 @@ app.get('/hello', function (req, res) {
       {
         type: 'counter',
         name: 'orchestration-counter-name',
-        value: 10
+        value: 1
       },
       {
         type: 'timer',
@@ -84,7 +88,7 @@ app.get('/hello', function (req, res) {
     {
       type: 'counter',
       name: 'mediator-counter-name',
-      value: 72
+      value: 1
     },
     {
       type: 'timer',
