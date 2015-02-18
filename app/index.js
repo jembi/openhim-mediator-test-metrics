@@ -18,7 +18,7 @@ register.registerMediator( apiConfig, mediatorConfig)
 /* ######################### */
 
 /* ##### Delay Response #### */
-app.use(delay(Math.random() * (4000) + 1000))
+app.use(delay(Math.random() * (500) + 100))
 
 /* ##### Default Endpoint  ##### */
 app.get('/hello', function (req, res) {

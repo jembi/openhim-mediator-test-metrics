@@ -47,7 +47,7 @@ exports.registerMediator = function(apiConfig, mediatorConfig){
 
     // define request headers with auth credentails
     var options = {
-
+      json: true,
       headers: { 'auth-username': username,
                   'auth-ts': body.ts,
                   'auth-salt': body.salt,
